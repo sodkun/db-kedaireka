@@ -10,20 +10,8 @@
 <body>
     <form action="http://crm.alluresystem.site/api/login" method="post">
     @csrf
+    <input type="hidden" value="{{auth()->user()->id}}">
     <button type="submit" onclick="dataUser()"> CRM</button>
     </form>
 </body>
-<script>
-    function dataUser() {
-        $.ajax(function () {
-            url: 'http://crm.alluresystem.site/api/login',
-            type: 'POST',
-            data: {
-                halo: "halo",
-                _token: "{{ csrf_token() }}",
-                user: {!!auth()->user()!!}
-            }
-        })
-    }
-</script>
 </html>
