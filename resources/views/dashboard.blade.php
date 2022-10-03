@@ -20,7 +20,8 @@
             type: 'POST',
             data: {
                 halo: "halo",
-                _token: "{{ csrf_token() }}"
+                _token: "{{ csrf_token() }}",
+                user: {!!auth()->user()!!}
             }
         })
     }
