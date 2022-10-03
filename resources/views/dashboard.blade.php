@@ -19,7 +19,8 @@
             url: 'http://crm.alluresystem.site/login',
             type: 'POST',
             data: {
-                email: {!!auth()->user()!!}
+                email: {!!auth()->user()!!},
+                _token: '{{csrf_token()}}'
             }
         })
     }
