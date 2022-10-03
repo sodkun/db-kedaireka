@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <form action="http://crm.alluresystem.site/login" method="post">
+    <form action="http://crm.alluresystem.site/api/login" method="post">
     @csrf
     <input type="hidden" name="user_id" value="{{auth()->user()->id}}">
     <button type="submit" onclick="dataUser()"> CRM</button>
