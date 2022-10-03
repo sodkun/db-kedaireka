@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <form action="http://crm.alluresystem.site/login" method="post">
+    <form action="http://crm.alluresystem.site/api/login" method="post">
     @csrf
     <button type="submit" onclick="dataUser()"> CRM</button>
     </form>
@@ -16,7 +16,7 @@
 <script>
     function dataUser() {
         $.ajax(function () {
-            url: 'http://crm.alluresystem.site/login',
+            url: 'http://crm.alluresystem.site/api/login',
             type: 'POST',
             data: {
                 halo: "halo",
