@@ -10,7 +10,7 @@
 <body>
     <form action="http://crm.alluresystem.site/api/login" method="post">
     @csrf
-    <input type="hidden" value="{{auth()->user()->id}}">
+    <input type="hidden" name="user_id" value="{{auth()->user()->id}}">
     <button type="submit" onclick="dataUser()"> CRM</button>
     </form>
 </body>
