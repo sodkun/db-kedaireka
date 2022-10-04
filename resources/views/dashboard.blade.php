@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <form action="http://crm.alluresystem.site/login" method="post">
-    @csrf
     <input type="hidden" name="user_id" value="{{base64_encode(auth()->user()->id)}}">
     <button type="submit"> CRM</button>
     </form>
+    <form action="http://sales.alluresystem.site/login" method="post">
+        <input type="hidden" name="user_id" value="{{base64_encode(auth()->user()->id)}}">
+        <button type="submit"> Sales</button>
+        </form>
 </body>
 </html>
